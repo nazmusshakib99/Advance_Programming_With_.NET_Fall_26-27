@@ -1,0 +1,40 @@
+﻿@{
+	Layout = "_Layout2";
+	ViewData["Title"] = "ViewEample";
+	int start = int.Parse(ViewBag.start.ToString());
+	int end = int.Parse(ViewBag.end.ToString());
+}
+
+<div>@Model</div>
+
+
+
+<ul>
+	@for (int i = start; i <= end; i++)
+	{
+		if (i % 2 == 0)
+		{
+			<li>Even Item @i</li>
+		}
+		else
+		{
+			<li>Odd Item @i</li>
+		}
+	}
+</ul>
+
+<table class="table table-bordered">
+	@for(int i = start; i <=end; i++)
+	{
+		<tr>
+             <td>Column @i</td>
+             <td>Column @i</td>
+       </tr>
+	}
+
+</table>
+@section SubMenu{
+
+<a href="#" class="btn btn-primary">Sub Menu Item 1</a>
+
+}

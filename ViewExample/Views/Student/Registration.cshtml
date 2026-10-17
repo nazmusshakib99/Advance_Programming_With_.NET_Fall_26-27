@@ -1,0 +1,52 @@
+﻿@{
+    ViewData["Title"] = "Student Registration";
+    Layout = "_Layout2";
+    <p>@ViewBag.Message</p>
+}
+
+<h2>Student Registration</h2>
+
+<form method="post">
+
+       <label>Student ID:</label>
+    <input type="number" name="StudentId" />
+    <br /><br />
+
+    <label>Full Name:</label>
+    <input type="text" name="FullName" />
+    <br /><br />
+
+       <label>Email:</label>
+    <input type="email" name="Email" />
+       <br /><br />
+
+    <label>Phone:</label>
+    <input type="text" name="Phone" />
+    <br /><br />
+
+    <label>Gender:</label>
+
+<input type="radio" name="Gender" value="Male" /> Male
+
+<input type="radio" name="Gender" value="Female" /> Female
+    <br /><br />
+
+    <label>Date of Birth:</label>
+    <input type="date" name="DateOfBirth" />
+    <br /><br />
+
+    <label>Address:</label>
+    <textarea name="Address"></textarea>
+    <br /><br />
+
+    <label>Department:</label>
+    <select name="Department">
+        <option>CSE</option>
+        <option>EEE</option>
+        <option>BBA</option>
+    </select>
+    <br /><br />
+
+    <button type="submit">Register</button>
+
+</form>
