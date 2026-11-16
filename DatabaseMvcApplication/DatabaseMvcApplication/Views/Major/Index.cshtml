@@ -1,0 +1,31 @@
+﻿@model List<Major>
+
+
+<table class="table table-bordered">
+
+	<tr>
+		<th>ID:</th>
+		<th>Title:</th>
+		<th>Total Credit:</th>
+		<th>Total Tution Fee:</th>
+		<th>Per Credit Fee:</th>
+	</tr>
+	@foreach(var major in Model)
+	{
+
+		var perCreditFee=major.TotalTutionFee/major.TotalCredit;
+		if (perCreditFee > 5500)
+		{
+			<tr>
+				<td>@major.Id</td>
+				<td>@major.Title</td>
+				<td>@major.TotalTutionFee</td>
+				<td>@major.TotalCredit</td>
+				 <td>@perCreditFee</td> 
+			</tr>
+		}
+
+	}
+
+</table>
+
